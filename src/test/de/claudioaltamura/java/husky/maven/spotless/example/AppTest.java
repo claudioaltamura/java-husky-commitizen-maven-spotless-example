@@ -1,4 +1,4 @@
-package java.husky.maven.spotless.example;
+package de.claudioaltamura.java.husky.maven.spotless.example;
 
 import static org.junit.Assert.assertTrue;
 

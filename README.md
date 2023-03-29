@@ -5,7 +5,6 @@
 ### Install
     
     npm install husky --save-dev
-    npx husky install
 
 ### Configure
 
@@ -55,6 +54,10 @@ Add a hook
 
     git cz
 
+
+### Override
+
+    git commit -m "override cz" --no-verify
 
 ## Links
 
