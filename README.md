@@ -1,7 +1,22 @@
 # java-husky-maven-spotless-example
 
+## Husky
+
+### Install
+    
+    npm install husky --save-dev
+    npx husky install
+
+### Configure
+
+Add a hook
+
+    npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
+
+    npx husky add .husky/pre-commit "mvn test"
 
 ## commitlint
+
 ### Install commitlint
 
     npm install --save-dev @commitlint/{cli,config-conventional,prompt-cli}
@@ -9,6 +24,7 @@
 ### Configure
 
     echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js 
+
 ### Add hook
     
     npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'
@@ -25,12 +41,24 @@
 
     husky - commit-msg hook exited with code 1 (error)
 
-## commitizen
+## Commitizen
 
+### Install
+    
     npm install -g commitizen
+
+### Configure
+
+    commitizen init cz-conventional-changelog --save-dev --save-exact
+
+### Use
+
+    git cz
 
 
 ## Links
+
+https://typicode.github.io/husky/#/?id=install
 
 https://commitlint.js.org/#/guides-local-setup
 

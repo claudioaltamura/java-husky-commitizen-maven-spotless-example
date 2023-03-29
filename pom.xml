@@ -12,14 +12,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <spotless.version>2.4.1</spotless.version>
-    <argLine>
-      --add-exports jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED \
-  --add-exports jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED \
-  --add-exports jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED \
-  --add-exports jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED \
-  --add-exports jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED
-    </argLine>
   </properties>
 
   <dependencies>
@@ -33,32 +25,6 @@
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>com.diffplug.spotless</groupId>
-        <artifactId>spotless-maven-plugin</artifactId>
-        <version>${spotless.version}</version>
-        <configuration>
-          <java>
-            <!-- These are the defaults, you can override if you want -->
-            <includes>
-              <include>src/main/java/**/*.java</include>
-              <include>src/test/java/**/*.java</include>
-            </includes>
-
-            <googleJavaFormat>
-              <version>1.16.0</version>
-            </googleJavaFormat>
-
-            <importOrder />
-
-            <removeUnusedImports />
-
-            <licenseHeader>
-              <content>/* (C)$YEAR */</content>              <!-- or <file>${project.basedir}/license-header</file> -->
-            </licenseHeader>
-          </java>
-        </configuration>
-      </plugin>
     </plugins>
   </build>
 
