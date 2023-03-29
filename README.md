@@ -1,5 +1,11 @@
+[![Build Status](https://travis-ci.com/claudioaltamura/java-husky-commitizen-maven-spotless-example.svg?branch=master)](https://travis-ci.com/claudioaltamura/java-husky-commitizen-maven-spotless-example
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # java-husky-commitizen-maven-spotless-example
 java-husky-commitizen-maven-spotless-example
+
+spotless not working!!!
 
 ## Husky
 
