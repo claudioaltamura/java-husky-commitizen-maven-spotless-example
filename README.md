@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/claudioaltamura/java-husky-commitizen-maven-spotless-example.svg?branch=master)](https://travis-ci.com/claudioaltamura/java-husky-commitizen-maven-spotless-example)
+[![Build Status](https://travis-ci.com/github/claudioaltamura/java-husky-commitizen-maven-spotless-example.svg?branch=main)](https://travis-ci.com/github/claudioaltamura/java-husky-commitizen-maven-spotless-example)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
