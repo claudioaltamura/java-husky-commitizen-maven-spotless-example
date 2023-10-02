@@ -5,21 +5,17 @@
 # java-husky-commitizen-maven-spotless-example
 java-husky-commitizen-maven-spotless-example
 
-spotless not working!!!
-
 ## Husky
 
 ### Install
-    
+
     npm install husky --save-dev
 
 ### Configure
 
 Add a hook
 
-    npx husky add .husky/commit-msg 'npx --no -- commitlint --edit "$1"'
-
-    npx husky add .husky/pre-commit "mvn test"
+    npx husky add .husky/pre-commit "mvn spotless:check"
 
 ## commitlint
 
@@ -29,13 +25,15 @@ Add a hook
 
 ### Configure
 
-    echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js 
+    echo "module.exports = {extends: ['@commitlint/config-conventional']};" > commitlint.config.js
 
-### Add hook
-    
+### Add another hook
+
     npx husky add .husky/commit-msg  'npx --no -- commitlint --edit ${1}'
 
-### Test
+### Test hook commit-msg
+
+    see https://typicode.github.io/husky/guide.html#test-hooks
 
     git commit -m "new: initial commit"
 
@@ -47,10 +45,17 @@ Add a hook
 
     husky - commit-msg hook exited with code 1 (error)
 
+see https://github.com/conventional-changelog/commitlint/#what-is-commitlint
+
+### Bypass a commit
+
+    git commit -m "yolo!" --no-verify
+
+
 ## Commitizen
 
 ### Install
-    
+
     npm install -g commitizen
 
 ### Configure
